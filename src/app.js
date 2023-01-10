@@ -12,6 +12,7 @@ window.onload = function() {
 
   function enviarDatos(e) {
     e.preventDefault();
+    let Cosorojo = document.getElementById("Cosorojo");
     let card = document.getElementById("card");
     let cvc = document.getElementById("cvc");
     let amount = document.getElementById("amount");
@@ -34,41 +35,55 @@ window.onload = function() {
     if (card.value === "") {
       alert("El campo Card # está vacio");
       card.style.backgroundColor = "pink";
+      Cosorojo.style.display = "block";
+      todobien = false;
+    }
+    if (card.value === "") {
+      alert("El campo Card # está vacio");
+      card.style.backgroundColor = "pink";
+      Cosorojo.style.display = "block";
       todobien = false;
     }
     if (cvc.value === "") {
       alert("El campo cvc está vacio");
       cvc.style.backgroundColor = "pink";
+      Cosorojo.style.display = "block";
       todobien = false;
     }
     if (amount.value === "") {
       alert("El campo amount está vacio");
       amount.style.backgroundColor = "pink";
+      Cosorojo.style.display = "block";
       todobien = false;
     }
     if (firstName.value === "") {
       alert("El campo First Name está vacio");
       firstName.style.backgroundColor = "pink";
+      Cosorojo.style.display = "block";
       todobien = false;
     }
     if (lastName.value === "") {
       alert("El campo lastName está vacio");
       lastName.style.backgroundColor = "pink";
+      Cosorojo.style.display = "block";
       todobien = false;
     }
     if (city.value === "") {
       alert("El campo city está vacio");
       city.style.backgroundColor = "pink";
+      Cosorojo.style.display = "block";
       todobien = false;
     }
     if (postalCode.value === "") {
       alert("El campo Postal Code está vacio");
       postalCode.style.backgroundColor = "pink";
+      Cosorojo.style.display = "block";
       todobien = false;
     }
     if (textarea.value === "") {
       alert("El campo Example textarea está vacio");
       textarea.style.backgroundColor = "pink";
+      Cosorojo.style.display = "block";
       todobien = false;
     }
     if (select.value === "Pick a state") {
@@ -82,5 +97,6 @@ window.onload = function() {
     document.querySelector(".alert-danger").style.visibility = "visible";
   }
   form.addEventListener("submit", enviarDatos);
+
   //console.log("Hello Rigo from the console!");
 };
